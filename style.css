@@ -158,15 +158,24 @@ animation-delay: 1s;
 #list-products .item {
   width: 290px;
   height: 374px;
-  background-color: #b5651d;
-  border-radius: 10px;
+  background-color: orange;
+  border-radius: 20px;
   margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#list-products .item.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #list-products .item img {
   display: block;
   margin: 0px auto;
   margin-top: 17px;
+  border-radius: 20px;
 }
 
 #list-products .item .stars {
@@ -191,5 +200,34 @@ animation-delay: 1s;
   text-align: center;
   color: red;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+.list-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.list-page .item {
+  width: 40px;
+  height: 40px;
+  background: gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.list-page .item:hover {
+  background: orange;
+}
+
+.list-page .item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
